@@ -25,7 +25,7 @@
 
   3. A test run of the solvers for a system AX=B is performed by
 
-           ./block_iterative_solvers_test *number_of_RHS_columns* [*number_of_rows*]
+          ./block_iterative_solvers_test _number_of_RHS_columns_ [_number_of_rows_]
 
     If you skip the *number_of_rows*, you will be prompted to enter a filename of matrix A. If *number_of_rows* is entered, a random square matrix of size (*number_of_rows*, *number_of_rows*) is assumed for A. The matrix B is set to be a random rectangular matrix of size (*number_of_rows*, *number_of_RHS_columns*).  
 
@@ -33,7 +33,7 @@
 ### Interface of solver:
 Function interface is common to all the solvers.
 
-    Eigen::MatrixXcd *solver_name*(const Eigen::MatrixXcd& A, const Eigen::MatrixXcd& B, const double& tol, const int& itermax);
+    Eigen::MatrixXcd _solver_name_(const Eigen::MatrixXcd& A, const Eigen::MatrixXcd& B, const double& tol, const int& itermax);
 
 The "Eigen::MatrixXcd" is a Eigen class of a dynamically-allocated matrix with type std::complex<double>. Each solver returns a solution matrix X of size (*number_of_rows*, *number_of_RHS_columns*) in "Eigen::MatrixXcd" format.
 
