@@ -17,7 +17,7 @@ using namespace std::chrono;
 int main(int argc, char *argv[]){
 
     double tol= 1e-8;
-    int itermax= 100;
+    int itermax= 1000;
 
     std::srand((unsigned int) time(0));
     int L=atoi(argv[1]); // dimension of matrix A
