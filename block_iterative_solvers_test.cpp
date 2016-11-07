@@ -63,10 +63,6 @@ int main(int argc, char *argv[]){
     MatrixXcd B= MatrixXcd::Random(A.rows(),L);
 
 
-
-
-
-
     {
         time_point<steady_clock> start= steady_clock::now();
         cout << "solving AX=B using bl_cocg_rq ..." << endl;
@@ -74,8 +70,6 @@ int main(int argc, char *argv[]){
         cout << " bl_cocg_rq relative error: " << (A*X-B).norm()/B.norm() << endl << endl;
         auto end= steady_clock::now();
         cout << "bl_cocg_rq computation time= " << duration_cast<seconds>((end - start)).count()  << " sec" << endl << endl<< endl;
-        //cout << X.prod() << endl<<endl;
-        //cout << X.sum() << endl<<endl;
     }
 
 
@@ -86,8 +80,6 @@ int main(int argc, char *argv[]){
         cout << " bl_bicg_rq relative error: " << (A*X-B).norm()/B.norm() << endl << endl;
         auto end= steady_clock::now();
         cout << "bl_bicg_rq computation time= " << duration_cast<seconds>((end - start)).count() << " sec" << endl << endl<< endl;
-        //cout << X.prod() << endl<<endl;
-        //cout << X.sum() << endl<<endl;
     }
 
     {
@@ -97,8 +89,6 @@ int main(int argc, char *argv[]){
         cout << " bl_bicr_rq relative error: " << (A*X-B).norm()/B.norm() << endl << endl;
         auto end= steady_clock::now();
         cout << "bl_bicr_rq computation time= " << duration_cast<seconds>((end - start)).count() << " sec" << endl << endl<< endl;
-        //cout << X.prod() << endl<<endl;
-        //cout << X.sum() << endl<<endl;
     }
 
     {
