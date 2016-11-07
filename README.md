@@ -27,7 +27,7 @@
 	
 			./block_iterative_solvers_test number_of_RHS_columns [number_of_rows]
 			
-    If you skip the *number_of_rows*, you will be prompted to enter a filename of matrix A. If *number_of_rows* is entered, a random square matrix of size (*number_of_rows*, *number_of_rows*) is assumed for A. The matrix B is set to be a random rectangular matrix of size (*number_of_rows*, *number_of_RHS_columns*).  
+    If you skip the number_of_rows, you will be prompted to enter a filename of matrix A. If number_of_rows is entered, a random square matrix of size (number_of_rows, number_of_rows) is assumed for A. The matrix B is set to be a random rectangular matrix of size (number_of_rows, number_of_RHS_columns).  
 
 
 ### Interface of solver:
